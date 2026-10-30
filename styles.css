@@ -1,0 +1,321 @@
+/* PKHosting landing page template. Mobile-first: single column, large tap
+   targets, readable on a phone first. Wider screens get centered content
+   and a two-column feature list. Brand green #1aa54a, dark green #0e6b32. */
+
+:root {
+  --green: #1aa54a;
+  --dark-green: #0e6b32;
+  --ink: #1a1a1a;
+  --grey: #555555;
+  --light-green: #eaf7ee;
+  --border: #d8e6dc;
+  --white: #ffffff;
+  --bg: #f4f8f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.55;
+  font-size: 17px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: var(--dark-green);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* Header */
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--dark-green);
+  text-decoration: none;
+}
+
+.header-phone {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* Hero */
+
+.hero {
+  background: var(--light-green);
+  padding: 36px 0 32px;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: #333333;
+  margin: 0 0 22px;
+}
+
+.cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Buttons: full width and at least 48px tall on phones */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 13px 22px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: var(--dark-green);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--dark-green);
+  border-color: var(--dark-green);
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background: var(--light-green);
+}
+
+/* Domain search */
+
+.domain-search {
+  padding: 32px 0;
+}
+
+.domain-search h2,
+.features h2,
+.plans-teaser h2 {
+  font-size: 24px;
+  color: var(--dark-green);
+  margin: 0 0 8px;
+}
+
+.domain-search p {
+  margin: 0 0 16px;
+  color: #333333;
+}
+
+.domain-search label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.search-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-row input {
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 14px;
+  font-size: 16px;
+  border: 1.5px solid #bbbbbb;
+  border-radius: 8px;
+}
+
+.search-row input:focus {
+  border-color: var(--green);
+}
+
+.field-error {
+  color: #b00020;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.field-note {
+  font-size: 14px;
+  color: var(--grey);
+  margin-top: 12px;
+}
+
+/* Features */
+
+.features {
+  padding: 8px 0 32px;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-list li {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.feature-list h3 {
+  font-size: 18px;
+  color: var(--dark-green);
+  margin: 0 0 6px;
+}
+
+.feature-list p {
+  margin: 0;
+  color: #333333;
+}
+
+/* Plans teaser */
+
+.plans-teaser {
+  background: var(--dark-green);
+  color: var(--white);
+  padding: 32px 0;
+}
+
+.plans-teaser h2 {
+  color: var(--white);
+}
+
+.plans-teaser p {
+  margin: 0 0 20px;
+}
+
+.plans-teaser .btn-primary {
+  background: var(--white);
+  color: var(--dark-green);
+}
+
+.plans-teaser .btn-primary:hover,
+.plans-teaser .btn-primary:active {
+  background: var(--light-green);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 28px 0 36px;
+  font-size: 15px;
+  color: var(--grey);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0 0 8px;
+}
+
+.tracking-note {
+  font-size: 13px;
+}
+
+/* Wider screens: buttons sit side by side, features in two columns */
+
+@media (min-width: 520px) {
+  .cta-row {
+    flex-direction: row;
+  }
+
+  .cta-row .btn {
+    width: auto;
+    flex: 1;
+  }
+
+  .search-row {
+    flex-direction: row;
+  }
+
+  .search-row input {
+    flex: 1;
+  }
+
+  .search-row .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 720px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .feature-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .feature-list li {
+    flex: 1 1 45%;
+  }
+}
