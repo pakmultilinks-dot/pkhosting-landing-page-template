@@ -3,6 +3,25 @@
 Build files only. This folder holds index.html, styles.css, and app.js.
 Do not deploy from this folder; deployment is handled separately.
 
+## 0. Pages in this set (added 11 November 2026)
+
+- index.html: shared hosting landing page. Hero, domain search, why host,
+  and a real 3-plan shared hosting price table (Personal, Business,
+  Professional) with first-year and renewal prices, checked live on
+  pkhosting.com on 11 November 2026.
+- domains.html: domain registration landing page. Domain search form,
+  domain price table (.com, .pk, .com.pk, .org.pk, .net.pk) with first
+  term and renewal, and the three steps from a name to a live website.
+  Prices checked live on pkhosting.com on 11 November 2026.
+- improve.html: how pkhosting.com could be better. Four findings checked
+  live on 11 November 2026, each with the exact fix, plus what the site
+  already does well. Nothing on pkhosting.com itself was changed.
+- All three pages share styles.css and app.js. The top navigation links
+  the pages together. The domain form on domains.html uses the same
+  form ids as index.html, so app.js works on both pages unchanged.
+  improve.html has no domain form; app.js handles a missing form by
+  doing nothing for it, and the outbound link tagging still works.
+
 ## 1. Domain search URL used, and how it was verified
 
 Used: https://pkhosting.com/domains/
@@ -79,7 +98,58 @@ Safety: if localStorage is unavailable (for example private mode) or
 the stored value is corrupt, app.js ignores storage and the page and
 its links keep working with no UTMs added.
 
-## 3. Reuse for other outreach traffic
+## 4. Prices shown on the pages (checked 11 November 2026)
+
+Shared hosting, from pkhosting.com/pricing/ and the homepage, both read
+live on 11 November 2026. Black Friday first-year prices, renewals shown
+beside them:
+
+- Personal: Rs 4,490/yr first year, renews Rs 6,990/yr. 1 website,
+  5 GB SSD, 5 emails, daily backups 1-day retention.
+- Business: Rs 11,990/yr first year, renews Rs 19,990/yr. 5 websites,
+  25 GB SSD, 25 emails, daily backups 3-day retention, Priority Setup.
+- Professional: Rs 23,990/yr first year, renews Rs 39,990/yr.
+  10 websites, 50 GB SSD, 50 emails, daily backups 5-day retention,
+  Priority Support.
+- All three include free SSL, free migration, WordPress setup help and a
+  free .com with a 3-year term. Monthly billing from Rs 699/month for
+  Personal (monthly billing rate is set from the renewal price).
+- Add-ons and taxes are extra. The live pricing page governs; re-check
+  prices before any new print or campaign run.
+
+Domains, from pkhosting.com/domains/ and the homepage, read live on
+11 November 2026:
+
+- .com: Rs 3,299/yr first year, renews Rs 3,762/yr, 1-year term.
+- .pk, .com.pk, .org.pk, .net.pk: Rs 3,899 first term, renews Rs 5,460,
+  2-year minimum term.
+- 910 extensions listed, including 16 local .pk extensions. Search
+  checks up to 20 extensions, exact extension first, no account
+  required. A search does not reserve a name. Premium names need a
+  separate quote.
+
+## 5. Improvement findings on improve.html (checked 11 November 2026)
+
+- pkhosting.com/clientarea.php returns 404. Fix: 301 redirect it to
+  /login/. The homepage itself does not link to it.
+- The featured blog article is "508 Resource Limit Is Reached: How to
+  Fix It in cPanel", written for cPanel menus. PK Hosting runs the
+  Hestia panel (panel.pkhosting.com), not cPanel. Fix: rewrite it for
+  the Hestia dashboard.
+- No Trustpilot profile for pkhosting.com appeared in search on
+  11 November 2026 (competitors Pakish, Cheaphosting.pk, Hoster.pk and
+  WebHoster.pk all have one). Fix: create and claim a profile and
+  invite real customers to review.
+- No Google Business Profile for PK Hosting appeared in search on
+  11 November 2026. Fix: create one for the Lahore office, 231-B Main
+  Boulevard, Phase 8 DHA, Lahore, phone (042) 35692952.
+- Also verified the same day: the homepage has zero dead "#" links;
+  social links are real (Facebook, X, LinkedIn, YouTube); the homepage
+  is honest about affiliated network sites and backup limits; the
+  knowledgebase has 30 guides; the blog has 29 articles; PK Hosting is
+  listed on GoodFirms.
+
+## 6. Reuse for other outreach traffic
 
 - Copy index.html, styles.css, and app.js together. app.js needs no
   edits for a new campaign.
